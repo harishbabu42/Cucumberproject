@@ -3,6 +3,7 @@ package stepDefinition;
 import java.io.File;
 import java.io.IOException;
 
+import Objects.GoogleHomppage;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -36,9 +37,10 @@ public class Loginautoo extends Base {
 		
 		System.out.println(driver.getTitle());
 		driver.manage().window().maximize();
-		driver.findElement(By.id("APjFqb")).sendKeys(name);
+		GoogleHomppage g=new GoogleHomppage(driver);
+		g.searchIdElement().sendKeys(name);
 		Thread.sleep(3000);
-		driver.findElement(By.id("APjFqb")).sendKeys(Keys.ENTER);
+		g.searchIdElement().sendKeys(Keys.ENTER);
 		Thread.sleep(4000);
 
 	}
