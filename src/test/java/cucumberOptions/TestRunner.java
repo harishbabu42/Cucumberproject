@@ -13,8 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 				"pretty",
 				"html:target/cucumber-html-reports/cucumber.html",
 				"json:target/cucumber-json"}
-)
-
+                )
 public class TestRunner {
 
 }
